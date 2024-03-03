@@ -28,6 +28,7 @@ body{
 }
 
 .form-container{
+    margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
@@ -38,6 +39,55 @@ body{
     flex-direction:column ;
 }
 
-lable{
-    
+label{
+    font-size: 15px;
+    margin-bottom: 5px;
 }
+
+input , select , textarea{
+ padding: 6px 10px;
+ border: 1px solid #ccc;
+ border-radius: 4px ;
+ font-size: 15px;
+}
+
+input:focus{
+    outline-color: #ff0000;
+}
+
+.button-container{
+    display: flex;
+    justify-content: end;
+    margin-top: 20px;
+}
+
+button{
+    background-color: #ff0000;
+    border: transparent solid 2px;
+    padding: 5px 10px;
+    color: #ffffff;
+    border-radius: 8px;
+    transition: 0.3s ease-in;
+}
+
+button:hover{
+ background-color: #ccc;
+ border: 2px solid red;
+ color: #000000;
+ transition: 0.3s ease-out;
+ cursor: pointer;
+}
+
+.textarea-control{
+    grid-column: 1 / span 2;
+}
+
+.textarea-control textarea {
+    width: 100%;
+}
+
+@media (max-width: 460px){
+    .textarea-control{
+        grid-column: 1 / span 1;
+    }
+} ;
